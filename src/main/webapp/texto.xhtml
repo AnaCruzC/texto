@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Texto</title>
+</h:head>
+<h:body>
+<h:form>
+    <p:messages id="msgs"/>
+	<p:panel header="Texto" footer="">
+    <p:inputTextarea rows="8" cols="90" id="texto" value="#{textoBean.text}" required="true"/>
+    </p:panel>
+    
+    <p:commandButton value="Enviar" icon="pi pi-check" update="textoEntrada"  ajax="false" action="#{textoBean.procesarTexto}"  />
+    
+    <br></br>
+    
+     <p:inputTextarea rows="8" cols="90" id="textoEntrada" value="#{textoBean.textConverte}" disabled="true"/>
+
+    
+
+</h:form>
+	<br />
+	<br />
+
+</h:body>
+</html>
+
+
